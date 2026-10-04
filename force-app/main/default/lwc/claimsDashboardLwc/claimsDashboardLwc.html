@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Claims Adjuster Dashboard">
+        <div class="dashboard">
+            <div class="metrics">
+                <div class="metric-card"><h2>{totalClaims}</h2><p>Total Claims</p></div>
+                <div class="metric-card"><h2>{pendingClaims}</h2><p>Pending Claims</p></div>
+                <div class="metric-card"><h2>{highPriorityClaims}</h2><p>High Priority</p></div>
+                <div class="metric-card"><h2>₹{totalClaimAmount}</h2><p>Total Claim Amount</p></div>
+            </div>
+
+            <lightning-input
+                type="search"
+                label="Search Claims"
+                placeholder="Search by claim number or customer"
+                onchange={handleSearch}>
+            </lightning-input>
+
+            <lightning-combobox
+                label="Status"
+                value={selectedStatus}
+                options={statusOptions}
+                onchange={handleStatusChange}>
+            </lightning-combobox>
+
+            <template if:true={filteredClaims}>
+                <div class="claims-container">
+                    <template for:each={filteredClaims} for:item="claim">
+                        <c-claim-tile-lwc key={claim.claimId} claim={claim}>
+                        </c-claim-tile-lwc>
+                    </template>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <p class="error">Error loading claims.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,7 @@
+.dashboard { padding: 20px; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+.metric-card { padding: 20px; border-radius: 10px; text-align: center; background: #f4f6f9; }
+.metric-card h2 { font-size: 28px; margin: 0; }
+.metric-card p { margin-top: 8px; }
+.claims-container { margin-top: 20px; }
+.error { margin-top: 20px; }

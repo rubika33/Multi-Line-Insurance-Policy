@@ -1,0 +1,16 @@
+.claim-card {
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+    background: white;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h2 { margin: 0; }
+.severity { font-weight: bold; }
+.details { margin-top: 10px; }
+.details p { margin: 6px 0; }

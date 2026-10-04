@@ -1,0 +1,16 @@
+<template>
+    <article class="claim-card">
+        <div class="header">
+            <h2>{claim.claimNumber}</h2>
+            <span class="severity">{claim.severity}</span>
+        </div>
+        <div class="details">
+            <p><strong>Customer:</strong> {claim.customerName}</p>
+            <p><strong>Policy:</strong> {claim.policyNumber}</p>
+            <p><strong>Policy Type:</strong> {claim.policyType}</p>
+            <p><strong>Claim Amount:</strong> ₹{claim.claimAmount}</p>
+            <p><strong>Status:</strong> {claim.status}</p>
+            <p><strong>Approval:</strong> {claim.approvalStatus}</p>
+        </div>
+    </article>
+</template>
